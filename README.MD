@@ -1,6 +1,8 @@
 # Actividad 3 CRUD en Spring Boot y Relaciones
 
-**Desarrollador:** Mendez Garcia Angel de Jesus
+## Instituto Tecnologico de Oaxaca
+
+**Alumno:** Mendez Garcia Angel de Jesus
 
 **Profesora:** Martinez Nieto Adelina
 
