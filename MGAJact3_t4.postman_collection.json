@@ -1,0 +1,198 @@
+{
+  "info": {
+    "_postman_id": "1999b793-25d0-412b-9df2-fa81bdf76b09",
+    "name": "MGAJact3_t4",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "56498118"
+  },
+  "item": [
+    {
+      "name": "Editar",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            {
+              "key": "id",
+              "value": "20",
+              "type": "text",
+              "uuid": "0bfaaafc-cb6f-4300-8e31-1356791f0181"
+            },
+            {
+              "key": "nombre",
+              "value": "Jugador Prueba",
+              "type": "text",
+              "uuid": "1ef9b4fe-cbd1-40b9-8922-e356a7bc1704"
+            },
+            {
+              "key": "posicion",
+              "value": "Delantero",
+              "type": "text",
+              "uuid": "3a9ac36c-f915-45e9-a98c-5334e0a45836"
+            },
+            {
+              "key": "numeroCamiseta",
+              "value": "4",
+              "type": "text",
+              "uuid": "5af03cd0-31ce-495d-adde-4081afd19a9b"
+            },
+            {
+              "key": "equipo",
+              "value": "1",
+              "type": "text",
+              "uuid": "6a9b85d5-84b7-43f7-8ddb-5da278e64537"
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://localhost:2924/",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "2924",
+          "path": [
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Eliminar",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:2924/eliminar/20",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "2924",
+          "path": [
+            "eliminar",
+            "20"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Vista jugadores",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            {
+              "key": "id",
+              "value": "20",
+              "type": "text",
+              "uuid": "0bfaaafc-cb6f-4300-8e31-1356791f0181"
+            },
+            {
+              "key": "nombre",
+              "value": "Jugador Prueba",
+              "type": "text",
+              "uuid": "1ef9b4fe-cbd1-40b9-8922-e356a7bc1704"
+            },
+            {
+              "key": "posicion",
+              "value": "Delantero",
+              "type": "text",
+              "uuid": "3a9ac36c-f915-45e9-a98c-5334e0a45836"
+            },
+            {
+              "key": "numeroCamiseta",
+              "value": "4",
+              "type": "text",
+              "uuid": "5af03cd0-31ce-495d-adde-4081afd19a9b"
+            },
+            {
+              "key": "equipo",
+              "value": "1",
+              "type": "text",
+              "uuid": "6a9b85d5-84b7-43f7-8ddb-5da278e64537"
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://localhost:2924/",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "2924",
+          "path": [
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Vista equipos",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            {
+              "key": "id",
+              "value": "20",
+              "type": "text",
+              "uuid": "0bfaaafc-cb6f-4300-8e31-1356791f0181"
+            },
+            {
+              "key": "nombre",
+              "value": "Jugador Prueba",
+              "type": "text",
+              "uuid": "1ef9b4fe-cbd1-40b9-8922-e356a7bc1704"
+            },
+            {
+              "key": "posicion",
+              "value": "Delantero",
+              "type": "text",
+              "uuid": "3a9ac36c-f915-45e9-a98c-5334e0a45836"
+            },
+            {
+              "key": "numeroCamiseta",
+              "value": "4",
+              "type": "text",
+              "uuid": "5af03cd0-31ce-495d-adde-4081afd19a9b"
+            },
+            {
+              "key": "equipo",
+              "value": "1",
+              "type": "text",
+              "uuid": "6a9b85d5-84b7-43f7-8ddb-5da278e64537"
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://localhost:2924/equipos",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "2924",
+          "path": [
+            "equipos"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
