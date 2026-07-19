@@ -48,30 +48,37 @@ Aqui demuestro que las tablas fueron generadas correctamente por Hibernate y que
 Pruebas de la insercion de nuevos registros al sistema desde la vista web y confirmacion de que aparecen en la lista, ademas de una prueba cruda enviando los datos por peticion POST.
 
 **Agregar Nuevo Jugador (Formulario):**
+
 ![Formulario Agregar Jugador](src/main/resources/img/agregar-vista.png)
 
 **Jugador Agregado Exitosamente (Lista):**
+
 ![Confirmacion Agregar Jugador](src/main/resources/img/agregar-vista-conf.png)
 
 **Agregar Nuevo Equipo (Formulario):**
+
 ![Formulario Agregar Equipo](src/main/resources/img/agregar-vista-equipo.png)
 
 **Equipo Agregado Exitosamente (Lista):**
+
 ![Confirmacion Agregar Equipo](src/main/resources/img/agregar-vista-equipo-conf.png)
 
 **Prueba de Insercion de Datos (Backend):**
+
 ![Postman Crear](src/main/resources/img/agregar-postman.png)
 
 ### 3. Operacion UPDATE (Actualizar)
 Prueba modificando un registro existente enviando la informacion actualizada al mismo ID.
 
 **Prueba de Actualizacion de Datos:**
+
 ![Postman Editar](src/main/resources/img/editar-postman.png)
 
 ### 4. Operacion DELETE (Eliminar)
 Prueba simulando la peticion al controlador para remover un registro especifico de la base de datos de manera definitiva.
 
 **Prueba de Eliminacion de Datos:**
+
 ![Postman Eliminar](src/main/resources/img/eliminar-postman.png)
 
 
