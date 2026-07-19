@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" 
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" 
+      layout:decorate="~{layout}">
+
+<body class="container mt-4">
+    <div layout:fragment="content" class="container mt-4">
+
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <h2>Equipos Registrados</h2>
+            <div>
+                <a href="/" class="btn btn-secondary">Ver Jugadores</a>
+                <a href="/nuevo-equipo" class="btn btn-primary">Nuevo Equipo</a>
+            </div>
+        </div>
+
+        <table class="table table-hover table-bordered">
+            <thead class="table-dark">
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre</th>
+                    <th>Ciudad</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="equipo : ${equipos}" th:if="${equipo != null}">
+                    <td th:text="${equipo.id}"></td>
+                    <td th:text="${equipo.nombre}"></td>
+                    <td th:text="${equipo.ciudad}"></td>
+                    <td>
+                        <a th:href="@{/editar-equipo/{id}(id=${equipo.id})}" class="btn btn-warning btn-sm">Editar</a>
+                        <a th:href="@{/eliminar-equipo/{id}(id=${equipo.id})}" class="btn btn-danger btn-sm">Eliminar</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

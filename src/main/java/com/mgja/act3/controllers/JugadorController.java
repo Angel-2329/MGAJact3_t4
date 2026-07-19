@@ -9,7 +9,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 
 import com.mgja.act3.models.Jugador;
-import com.mgja.act3.repository.JugadorRepository;
+import com.mgja.act3.services.IEquipoService;
+import com.mgja.act3.services.IJugadorService;
 
 
 
@@ -19,42 +20,47 @@ import com.mgja.act3.repository.JugadorRepository;
 public class JugadorController 
 {
     @Autowired
-    private JugadorRepository repositorio;
+    private IJugadorService servicio;
+
+    @Autowired
+    private IEquipoService equipoService;
 
     @GetMapping("/")
     public String listarjugadores(Model modelo) 
     {
-        modelo.addAttribute("jugador",repositorio.findAll());
+        modelo.addAttribute("jugador",servicio.listarJugadores());
         return "index";
     }
     
     @GetMapping("/nuevo")
     public String nuevojugador(Model modelo) 
     {
-        modelo.addAttribute("messi",new Jugador());
+        modelo.addAttribute("jugador", new Jugador());
+        modelo.addAttribute("listaEquipos", equipoService.listarEquipos());
         return "form";
     }
     
     @PostMapping("/")
     public String guardarjugador(@ModelAttribute Jugador jugador) 
     {
-        repositorio.save(jugador);
+        servicio.guardarJugador(jugador);
         return "redirect:/";
     }
     
     @GetMapping("/editar/{id}")
     public String editarjugador(@PathVariable Integer id, Model modelo) 
     {
-        Jugador jugador = repositorio.findById(id).orElse(null);
+        Jugador jugador = servicio.obtenerPorId(id);
         modelo.addAttribute("jugador", jugador);
+        modelo.addAttribute("listaEquipos", equipoService.listarEquipos());
         return "form";
     }
 
     @GetMapping("/eliminar/{id}")
     public String eliminarjugador(@PathVariable Integer id) 
     {
-        repositorio.deleteById(id);
-        return "redirect/";
+        servicio.eliminarJugador(id);
+        return "redirect:/";
     }
     
 }

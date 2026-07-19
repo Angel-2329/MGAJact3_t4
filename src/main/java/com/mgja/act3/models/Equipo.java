@@ -1,5 +1,6 @@
 package com.mgja.act3.models;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import jakarta.persistence.Entity;
@@ -20,7 +21,9 @@ public class Equipo
     private String ciudad;
 
     @OneToMany(mappedBy="equipo")
-    private List<Jugador> jugadores;
+    private List<Jugador> jugadores = new ArrayList<>();
+
+    public Equipo (){}
 
     public Integer getId() {
         return id;
