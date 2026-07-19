@@ -1,7 +1,9 @@
 # Actividad 3 CRUD en Spring Boot y Relaciones
 
 **Desarrollador:** Mendez Garcia Angel de Jesus
+
 **Profesora:** Martinez Nieto Adelina
+
 **Materia:** Verano de Programacion WEB
 
 ---
@@ -33,9 +35,11 @@ A continuacion presento las pruebas de funcionamiento de mi sistema, mostrando t
 Aqui demuestro que las tablas fueron generadas correctamente por Hibernate y que la llave foranea conecta correctamente al jugador con su equipo correspondiente.
 
 **Tabla Equipos:**
+
 ![Tabla de Equipos](src/main/resources/img/base.png)
 
 **Tabla Jugadores:**
+
 ![Tabla de Jugadores](src/main/resources/img/base2.png)
 
 ### 2. Operacion CREATE (Crear y Leer)
